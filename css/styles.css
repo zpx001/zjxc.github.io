@@ -88,7 +88,7 @@ font-size: 42px;
 }
 
 a {
-    color: #FF5C23;
+    color: #598447;
     text-decoration: none;
     text-shadow: none;
     -webkit-transition: all 0.2s linear;
@@ -114,7 +114,7 @@ a:hover {
 }
 
 .btn-primary {
-    background: #FF5C23;
+    background: #598447;
 }
 
 .form-control {
@@ -167,7 +167,7 @@ a:hover {
 
 .navbar-inverse .navbar-toggle {
     border-color: #008aff;
-    background-color: #FF5C23;
+    background-color: #598447;
     border-radius: 0px;
     border: 0;
 }
@@ -185,7 +185,7 @@ a:hover {
 }
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-    background: #FF5C23;
+    background: #598447;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
@@ -197,11 +197,11 @@ a:hover {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #ff5c23;
+    color: #598447;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-    color: #ff5c23;
+    color: #598447;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -278,7 +278,7 @@ div.navbar-header:after {
 }
 
 .navbar-brand b {
-    color: #ff5c23;
+    color: #598447;
     font-family: 'Syncopate', sans-serif;
     font-weight: 800;
 }
@@ -310,14 +310,14 @@ color:#000;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #FF5C23;
+    color: #598447;
     background: none;
     background: #fff;
     border-radius: 0;
 }
 
 .navbar-nav > li:hover > a {
-    color: #ff5c23;
+    color: #598447;
 }
 
 .header .navbar-nav > li > a {
@@ -325,7 +325,7 @@ color:#000;
 }
 
 .header .navbar-nav > li.active {
-    background: #ff5c23;
+    background: #598447;
 }
 
 .page-section {
@@ -481,7 +481,7 @@ color:#000;
 /*Intro Content*/
 #introText {
     padding: 50px 0;
-    background: #ff5c23;
+    background: #598447;
 }
 
 #introText h1, #introText p {
@@ -548,7 +548,7 @@ color:#000;
 
 .service-box {
 	background: #fff;
-	border-top: 3px dashed #FF5C23;
+	border-top: 3px dashed #598447;
 	padding: 40px 20px;
 }
 
@@ -889,11 +889,11 @@ nav#filter a {
 }
 
 .portfolio-item .portfolio-desc a {
-    color: #FF5C23;
+    color: #598447;
     text-align: center;
     display: block;
     padding: 18px;
-    border: 2px solid #FF5C23;
+    border: 2px solid #598447;
     margin: 0 auto;
     width: 66px;
 }
@@ -1029,7 +1029,7 @@ footer {
 }
 
 .social a:hover {
-    color: #FF5C23;
+    color: #598447;
 }
 
 .social a {
@@ -1183,7 +1183,7 @@ footer {
     color: #fff;
 }
 #testimonial{
-background: #FF5C23;
+background: #598447;
 color:#fff;
 }
 #testimonial p, blockquote small{
@@ -1275,8 +1275,8 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 .panel-danger>.panel-heading {
 color: #FFFFFF;
-background-color: #FF5C23;
-border-color: #FF5C23;
+background-color: #598447;
+border-color: #598447;
 }
 .panel {
 margin-bottom: 20px;
@@ -1555,12 +1555,12 @@ border-radius: 0;
 background: #fff;
 }
 a.btn.btn-skin {
-background: #FF5C23;
+background: #598447;
 color: #fff;
 }
 .da-slide .da-link {
 top: 270px;
-color: #FF5C23;
+color: #598447;
 text-shadow: none;
 border: 1px solid rgba(255,255,255,0.8);
 padding: 2px 20px;
