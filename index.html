@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>智建乡村·智慧乡村规划云平台</title>
+    <meta name="description" content="智建乡村——创新公益，赋能未来">
+    <meta name="author" content="智建乡村团队">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/da-slider.css" />
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="font/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        /* General Links and Main Color Elements */
+        a,
+        .logo strong,
+        .navbar-inverse .navbar-nav > .active > a,
+        .navbar-inverse .navbar-nav > .active > a:hover,
+        .navbar-inverse .navbar-nav > .active > a:focus,
+        #main-nav .nav li a:hover,
+        .service-icon span {
+            color: #4B8843;
+        }
+
+        /* Hover states for links */
+        a:hover, a:focus {
+            color: #3E6F38; /* Darker green for hover */
+        }
+
+        /* Custom Button "btn-skin" */
+        .btn-skin {
+            color: #4B8843;
+            border: 2px solid #4B8843;
+        }
+
+        .btn-skin:hover {
+            background-color: #4B8843;
+            color: #fff;
+        }
+
+        /* Primary Button */
+        .btn-primary {
+            background-color: #4B8843;
+            border-color: #4B8843;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active {
+            background-color: #3E6F38;
+            border-color: #3E6F38;
+        }
+        
+        /* Pricing Table Panel */
+        .panel-primary {
+             border-color: #4B8843;
+        }
+        
+        .panel-primary > .panel-heading {
+            background-color: #4B8843;
+            border-color: #4B8843;
+            color: #fff;
+        }
+
+        /* Header Divider */
+        .divider-header {
+            background: #4B8843;
+        }
+
+        /* Scroll to Top Button */
+        .topHome {
+            background-color: #4B8843;
+        }
+        .topHome:hover {
+            background-color: #3E6F38;
+        }
+
+        /* 社会影响横排大数字样式 */
+        .impact-stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            margin: 40px 0 0 0;
+            gap: 20px;
+        }
+        .impact-stat {
+            flex: 1 1 22%;
+            background: #f7faf7;
+            border-radius: 18px;
+            margin: 0 5px;
+            padding: 32px 10px 24px 10px;
+            text-align: center;
+            box-shadow: 0 2px 16px rgba(75,136,67,0.07);
+            transition: transform 0.3s;
+        }
+        .impact-stat:hover {
+            transform: scale(1.06);
+            box-shadow: 0 6px 32px rgba(75,136,67,0.15);
+        }
+        .impact-num {
+            font-size: 3.2rem;
+            font-weight: 900;      /* 加粗 */
+            color: #4B8843 !important; /* 绿色，确保优先 */
+            margin-bottom: 12px;
+            transition: font-size 0.3s;
+            line-height: 1;
+        }
+        .impact-txt {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        .impact-desc {
+            font-size: 1rem;
+            color: #666;
+        }
+        @media (max-width: 991px) {
+            .impact-stats-row {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            .impact-stat {
+                flex: 1 1 45%;
+                margin-bottom: 16px;
+            }
+        }
+        @media (max-width: 600px) {
+            .impact-stats-row {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .impact-stat {
+                flex: 1 1 100%;
+                margin: 0 0 12px 0;
+                padding: 24px 8px 16px 8px;
+            }
+            .impact-num {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* 案例展示小标题和悬浮描述样式 */
+.portfolio-caption {
+    text-align: center;
+    background: #fff;
+    padding: 12px 8px 8px 8px;
+    border-radius: 0 0 12px 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #4B8843;
+    margin-bottom: 0;
+}
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(75,136,67,0.07);
+    margin-bottom: 24px;
+    background: #fff;
+}
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+.portfolio-desc {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background: rgba(75,136,67,0.92);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.35s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-radius: 12px;
+    z-index: 2;
+    pointer-events: none;
+}
+.portfolio-item:hover .portfolio-desc,
+.portfolio-item:focus .portfolio-desc {
+    opacity: 1;
+    pointer-events: auto;
+}
+.folio-desc-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+.portfolio-item .portfolio-caption {
+    z-index: 3;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .portfolio-caption {
+        font-size: 1rem;
+        padding: 10px 4px 6px 4px;
+    }
+    .folio-desc-text {
+        font-size: 0.98rem;
+        padding: 0 2px;
+    }
+}
+
+        /* 新增：服务图标图片样式 */
+        .service-img-icon {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+.package-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(75,136,67,0.07);
+    margin-bottom: 24px;
+}
+.package-img {
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    object-fit: cover;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">导航切换</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand scroll-top logo"><b>智建</b><strong>乡村</strong></a>
+                </div>
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" id="mainNav">
+                        <li class="active"><a href="#home" class="scroll-link">首页</a></li>
+                        <li><a href="#aboutUs" class="scroll-link">关于我们</a></li>
+                        <li><a href="#packages" class="scroll-link">解决方案</a></li>
+                        <li><a href="#priceTable" class="scroll-link">服务价格</a></li>
+                        <li><a href="#portfolio" class="scroll-link">案例展示</a></li>
+                        <li><a href="#contactUs" class="scroll-link">联系我们</a></li>
+                    </ul>
+                </div>  
+            </nav>
+        </div>
+    </header>
+    <div id="#top"></div>
+    <!-- 1. 首页 Banner -->
+    <section id="home">
+        <div class="banner-container">
+            <div class="banner-content">
+                <div id="da-slider" class="da-slider">
+                    <div class="da-slide">
+                        <div class="da-data">
+                            <h2>创新驱动 赋能乡村</h2>
+                        </div>
+                        <div class="da-img"><img src="images/banner-bg1.jpg" alt=""/></div>
+                   
+					</div>
+                    <div class="da-slide">
+                        <div class="da-data">
+                            <h2>产教融合 共创美丽乡村</h2>
+                        </div>
+                        <div class="da-img"><img src="images/banner-bg2.jpg" alt=""/></div>
+                    </div>
+                    <div class="da-slide">
+                        <div class="da-data">
+                            <h2>公益先行 乡村振兴</h2>
+                        </div>
+                        <div class="da-img"><img src="images/banner-bg3.jpg" alt=""/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2. 核心问题 -->
+    <section id="service" class="home-section page-section section appear clearfix secPad bg-gray">
+        <div class="text-center">
+            <div class="container">
+                <div class="heading text-center">
+                    <h2>我们解决的核心问题</h2>
+                    <p style="color:#498643;">针对乡村规划慢、环境治理难、特色挖掘弱三大行业痛点，智建乡村提供全流程一站式数字化赋能服务。</p>
+                </div>
+                <div class="row animatedParent">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="images/logo1.jpg" alt="加速乡村规划落地" class="service-img-icon">
+                            </div>
+                            <div class="service-desc">						
+                                <h5 style="color:#000000;">加速乡村规划落地</h5>
+                                <div class="divider-header"></div>
+                                <p style="color:#498643;">打造“积木式”自主设计平台，提供专家顾问与素材库，提升设计效率，实现村民自主参与规划。</p>
+                                <a href="#" class="btn btn-skin">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="images/logo2.jpg" alt="改善人居环境与村容" class="service-img-icon">
+                            </div>
+                            <div class="service-desc">
+                                <h5 style="color:#000000;">改善人居环境与村容</h5>
+                                <div class="divider-header"></div>
+                                <p style="color:#498643;">推动环境整治和空间提升，建设生态宜居村庄，定制化培训提升乡村工匠能力，助力美丽乡村建设。</p>
+                                <a href="#" class="btn btn-skin">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="images/logo3.jpg" alt="挖掘特色资源，产业赋能" class="service-img-icon">
+                            </div>
+                            <div class="service-desc">
+                                <h5 style="color:#000000;">挖掘特色资源，产业赋能</h5>
+                                <div class="divider-header"></div>
+                                <p style="color:#498643;">通过案例库、文旅与产业链联动，实现“农+文+旅”融合发展，推动乡村产业差异化、特色化。</p>
+                                <a href="#" class="btn btn-skin">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>		
+            </div>
+        </div>
+    </section>
+    <!-- 3. 核心解决方案与产品功能 -->
+    <section id="packages" class="secPad">
+        <div class="container">
+            <div class="heading text-center">
+                <h2>核心解决方案与产品功能</h2>
+                <p>“智建乡村”云平台，打造全链路数字乡村建设新范式</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="cuadro_intro_hover package-card">
+                        <p style="text-align:center;">
+                            <img src="images/pic/pic-1.jpg" class="img-responsive package-img" alt="">
+                        </p>
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <h3>定制化设计</h3>
+                                <p>支持一键设计与VR实景预览，让村庄规划更高效。</p>
+                                <a class=" btn btn-default" href="#"><i class="fa fa-chevron-circle-right"> 体验</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="cuadro_intro_hover package-card">
+                        <p style="text-align:center;">
+                            <img src="images/pic/pic-2.jpg" class="img-responsive package-img" alt="">
+                        </p>
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <h3>专家智库</h3>
+                                <p>联合规划设计院和高校专家，为乡建项目提供技术支撑。</p>
+                                <a class=" btn btn-default" href="#"><i class="fa fa-chevron-circle-right"> 体验</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="cuadro_intro_hover package-card">
+                        <p style="text-align:center;">
+                            <img src="images/pic/pic-3.jpg" class="img-responsive package-img" alt="">
+                        </p>
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <h3>素材库积累</h3>
+                                <p>积累8000+乡建素材，精准匹配建设场景与产业需求。</p>
+                                <a class=" btn btn-default" href="#"><i class="fa fa-chevron-circle-right"> 体验</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="cuadro_intro_hover package-card">
+                        <p style="text-align:center;">
+                            <img src="images/pic/pic-4.jpg" class="img-responsive package-img" alt="">
+                        </p>
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <h3>培训赋能</h3>
+                                <p>开展公益讲座与工匠培训，助力本土建设力量成长。</p>
+                                <a class=" btn btn-default" href="#"><i class="fa fa-chevron-circle-right"> 体验</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>    
+        </div>
+    </section>
+    <!-- 4. 社会影响大数字 -->
+    <section id="impact" style="background:#fff">
+        <div class="container">
+            <h2 class="section-title text-center">自项目运行以来</h2>
+            <div class="impact-stats-row">
+                <div class="impact-stat">
+                    <div class="impact-num" data-count="300">0</div>
+                    <div class="impact-txt">服务村庄</div>
+                    <div class="impact-desc">覆盖全国多个省份，助力乡村振兴</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-num" data-count="50">0</div>
+                    <div class="impact-txt">改造项目</div>
+                    <div class="impact-desc">涵盖乡村基础设施、公共服务等领域</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-num" data-count="1000+">0</div>
+                    <div class="impact-txt">培训工匠</div>
+                    <div class="impact-desc">提升乡村自我发展能力，促进就业创业</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-num" data-count="50000+">0</div>
+                    <div class="impact-txt">惠及人口</div>
+                    <div class="impact-desc">直接受益于我们的服务与项目</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 5. 案例展示 -->
+    <section id="portfolio" class="page-section section appear clearfix secPad">
+        <div class="container">
+            <div class="heading text-center">
+                <h2>案例展示</h2>
+                <p>精选乡村振兴、产业融合、工匠培训等实践案例，助力乡村全面发展</p>
+            </div>
+            <div class="row">            
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="portfolio-items isotopeWrapper clearfix" id="3">
+                            <article class="col-sm-4 isotopeItem webdesign">
+                                <div class="portfolio-item portfolio-hover">
+                                    <a href="https://www.xichuan.gov.cn/xcxnyncj/zwdt2/content_39758">
+                                        <img src="images/portfolio/portfolio_pic1.jpg" alt="" />
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <h4><a href="https://www.xichuan.gov.cn/xcxnyncj/zwdt2/content_39758" style="color:inherit;text-decoration:none;">邹庄村乡村振兴建设项目</a></h4>
+                                    </div>
+                                    <div class="portfolio-desc align-center">
+                                        <div class="folio-desc-text">
+                                            平台打造“红色旅游 + 生态农业”一体化链条，16 处景观节点让农旅融合生根见效。
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-4 isotopeItem photography">
+                                <div class="portfolio-item portfolio-hover">
+                                    <a href="info/case-kuqu.html">
+                                        <img src="images/portfolio/portfolio_pic2.jpg" alt="" />
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <h4><a href="info/case-kuqu.html" style="color:inherit;text-decoration:none;">库区乡人居环境整治项目</a></h4>
+                                    </div>
+                                    <div class="portfolio-desc align-center">
+                                        <div class="folio-desc-text">
+                                            依托平台工具联动蓝莓产业园，形成“种植—加工—文旅”闭环并接入电商，带动就业与投资双增长。
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-4 isotopeItem photography">
+                                <div class="portfolio-item portfolio-hover">
+                                    <a href="info/case-nanweizhuang.html">
+                                        <img src="images/portfolio/portfolio_pic3.jpg" alt="" />
+                                    </a>
+                                    <div class="portfolio-caption">
+                                        <h4><a href="info/case-nanweizhuang.html" style="color:inherit;text-decoration:none;">南位庄村村庄建设实践</a></h4>
+                                    </div>
+                                    <div class="portfolio-desc align-center">
+                                        <div class="folio-desc-text">
+                                            通过“高校智库 + 平台技术 + 村委主导 + 村民参与”的四维治理模型，实现道路、排水与产业协同改造，街巷停留率跃升至 68 %。
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 6. 关于我们 -->
+    <section id="aboutUs" class="secPad">
+        <div class="container">
+            <div class="heading text-center">
+                <h2>关于智建乡村团队</h2>
+                <p>以青年力量深耕乡土，助力乡村振兴新实践</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/1.jpg" alt="" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-8">
+                    <p>
+        团队自成立以来，历经
+        <span style="font-weight: bold; color: #498643;">47</span>次乡村调研，积累
+        <span style="font-weight: bold; color: #498643;">2000+</span>调研数据，服务
+        <span style="font-weight: bold; color: #498643;">42</span>县
+        <span style="font-weight: bold; color: #498643;">275</span>个村庄。我们汇聚城乡规划、风景园林、产品设计等多学科青年才俊，专业协作，产教融合。
+    </p> 
+    <p>
+        团队荣获“互联网+”创新创业大赛等
+        <span style="font-weight: bold; color: #498643;">20+</span>项奖项，出版《乡村建设工匠培训教材》，联合高校与企事业单位共建实践教学平台，累计培训乡村工匠
+        <span style="font-weight: bold; color: #498643;">1000+</span>人，推动专业服务反哺公益。
+    </p>
+    <p>
+        现有本硕博志愿者
+        <span style="font-weight: bold; color: #498643;">376</span>人，覆盖
+        <span style="font-weight: bold; color: #498643;">23</span>所高校，
+        <span style="font-weight: bold; color: #498643;">32</span>个专业。坚持公益为本，专业赋能，创新驱动，助力实现乡村可持续发展。
+    </p> 
+                </div>
+            </div>
+        </div>   
+    </section>
+    <!-- 7. 服务与合作模式 -->
+    <section id="priceTable" class="secPad white">
+        <div class="container">
+            <div class="heading text-center">
+                <h2>服务与合作模式</h2>
+                <p>平台面向政府、企事业、农户、工匠等多方提供个性化服务</p>
+            </div>
+            <div class="row"> 
+                <div class="col-sm-3">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3>基础公益</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="panel-title price">免费<span class="price-month">/培训</span></h3>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">公益讲座</li>
+                            <li class="list-group-item">工匠培训</li>
+                            <li class="list-group-item">村容村貌提升</li>
+                            <li class="list-group-item">可行性咨询</li>
+                            <li class="list-group-item">公益
+                            <li class="list-group-item"><a class="btn btn-default">立即咨询</a></li>
+                        </ul>
+                    </div>          
+                </div>
+                <div class="col-sm-3">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3>定制设计</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="panel-title price">¥789<span class="price-month">/季起</span></h3>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">专业设计团队</li>
+                            <li class="list-group-item">VR可视化体验</li>
+                            <li class="list-group-item">专属案例库</li>
+                            <li class="list-group-item">专家在线辅导</li>
+                            <li class="list-group-item">快速响应需求</li>
+                            <li class="list-group-item"><a class="btn btn-default">立即定制</a></li>
+                        </ul>
+                    </div>          
+                </div>
+                <div class="col-sm-3">
+                    <div class="panel panel-primary text-center">
+                        <div class="panel-heading">
+                            <h3>产业对接</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="panel-title price">按需定价</h3>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">资源平台对接</li>
+                            <li class="list-group-item">文旅产业策划</li>
+                            <li class="list-group-item">乡村产品电商</li>
+                            <li class="list-group-item">技术合作</li>
+                            <li class="list-group-item">落地转化支持</li>
+                            <li class="list-group-item"><a class="btn btn-primary">申请对接</a></li>
+                        </ul>
+                    </div>          
+                </div>
+                <div class="col-sm-3">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3>合作共建</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="panel-title price">面议</h3>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">政企联合共建</li>
+                            <li class="list-group-item">产教融合实践</li>
+                            <li class="list-group-item">全链路合作</li>
+                            <li class="list-group-item">专属定制方案</li>
+                            <li class="list-group-item">品牌推广合作</li>
+                            <li class="list-group-item"><a class="btn btn-default">合作洽谈</a></li>
+                        </ul>
+                    </div>          
+                </div>
+            </div>
+        </div>      
+    </section>
+    <!-- 8. 用户评价/合作反馈 -->
+    <section id="testimonial" class="page-section section appear clearfix secPad">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#quote-carousel" data-slide-to="1"></li>
+                            <li data-target="#quote-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-3 text-center">
+                                            <img class="img-circle" src="images/person_3.jpg" style="width: 100px; height: 100px;">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p>团队用专业与热爱服务乡村，村民参与热情高涨，项目落地实效显著。</p>
+                                            <small>项目合作村代表</small>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-3 text-center">
+                                            <img class="img-circle" src="images/person_1.jpg" style="width: 100px; height: 100px;">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p>平台素材丰富，设计高效便捷，是青年专业成长与乡村建设的理想舞台。</p>
+                                            <small>志愿者团队成员</small>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-3 text-center">
+                                            <img class="img-circle" src="images/person_2.jpg" style="width: 100px; height: 100px;">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <p>协同创新与实践教学为高校人才培养、社会服务提供新路径。</p>
+                                            <small>高校合作教授</small>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                       
+                </div>
+            </div>
+            <div class="row mrgn30">
+                <form method="post" action="" id="contactfrm" role="form">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="请输入姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="请输入邮箱">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="comments">留言</label>
+                            <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="请输入您的留言"></textarea>
+                        </div>
+                        <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">提交</button>
+                        <div class="result"></div>
+                    </div>
+                </form>
+                <div class="col-sm-4">
+                    <h4>地址：</h4>
+                    <address>
+                        河南省智建乡村团队<br>
+                        河南省金水区农业路63号<br>
+                        河南农业大学风景园林与艺术学院<br>
+                        邮编：450002<br>
+                        <strong>联系人：</strong>张老师<br>
+                        <strong>邮箱：</strong><a href="mailto:zhijianxiangcun@
+                        <br>hao
+                    </address>
+                    <h4>电话：</h4>
+                    <address>
+                        12345-49589-2<br>
+                    </address>
+                    <div class="social text-center">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-flickr"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+    <!-- 10. 页脚/版权 -->
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    Copyright 2025 | 智建乡村团队 版权所有
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+    <script src="js/modernizr-latest.js"></script>
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="js/jquery.nav.js" type="text/javascript"></script>
+    <script src="js/jquery.cslider.js" type="text/javascript"></script>
+    <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/owl-carousel/owl.carousel.js"></script>
+    <script>
+function animateCountUp(el, targetStr, duration = 1200) {
+    // 提取数字和非数字部分
+    const match = targetStr.match(/^(\d+)(\D*)$/);
+    if (!match) {
+        el.textContent = targetStr;
+        return;
+    }
+    const target = parseInt(match[1], 10);
+    const suffix = match[2] || '';
+    let start = 0;
+    let startTime = null;
+    function animateStep(timestamp) {
+        if (!startTime) startTime = timestamp;
+        let progress = Math.min((timestamp - startTime) / duration, 1);
+        let value = Math.floor(progress * (target - start) + start);
+        el.textContent = value.toLocaleString() + suffix;
+        if (progress < 1) {
+            requestAnimationFrame(animateStep);
+        } else {
+            el.textContent = target.toLocaleString() + suffix;
+        }
+    }
+    requestAnimationFrame(animateStep);
+}
+function impactStatsInView() {
+    const stats = document.querySelectorAll('.impact-num');
+    let triggered = false;
+    function check() {
+        if (triggered) return;
+        const section = document.getElementById('impact');
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            stats.forEach(el => {
+                if (!el.dataset.animated) {
+                    animateCountUp(el, el.dataset.count);
+                    el.dataset.animated = "1";
+                }
+            });
+            triggered = true;
+        }
+    }
+    window.addEventListener('scroll', check);
+    window.addEventListener('load', check);
+}
+impactStatsInView();
+    </script>
+</body>
+</html>

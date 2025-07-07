@@ -1,0 +1,141 @@
+卷 Win11Pro X64 的文件夹 PATH 列表
+卷序列号为 449C-8C98
+C:.
+│  index.html
+│  info.txt
+│  
+├─css
+│      bootstrap.min.css
+│      da-slider.css
+│      isotope.css
+│      styles.css
+│      
+├─font
+│  ├─css
+│  │      font-awesome.css
+│  │      font-awesome.min.css
+│  │      
+│  ├─fonts
+│  │      fontawesome-webfont.eot
+│  │      fontawesome-webfont.svg
+│  │      fontawesome-webfont.ttf
+│  │      fontawesome-webfont.woff
+│  │      fontawesome.otf
+│  │      glyphicons-halflings-regular.eot
+│  │      glyphicons-halflings-regular.svg
+│  │      glyphicons-halflings-regular.ttf
+│  │      glyphicons-halflings-regular.woff
+│  │      
+│  ├─less
+│  │      bordered-pulled.less
+│  │      core.less
+│  │      fixed-width.less
+│  │      font-awesome.less
+│  │      icons.less
+│  │      larger.less
+│  │      list.less
+│  │      mixins.less
+│  │      path.less
+│  │      rotated-flipped.less
+│  │      spinning.less
+│  │      stacked.less
+│  │      variables.less
+│  │      
+│  └─scss
+│          font-awesome.scss
+│          _bordered-pulled.scss
+│          _core.scss
+│          _fixed-width.scss
+│          _icons.scss
+│          _larger.scss
+│          _list.scss
+│          _mixins.scss
+│          _path.scss
+│          _rotated-flipped.scss
+│          _spinning.scss
+│          _stacked.scss
+│          _variables.scss
+│          
+├─fonts
+│      fontawesome-webfont.eot
+│      fontawesome-webfont.svg
+│      fontawesome-webfont.ttf
+│      fontawesome-webfont.woff
+│      fontawesome.otf
+│      glyphicons-halflings-regular.eot
+│      glyphicons-halflings-regular.svg
+│      glyphicons-halflings-regular.ttf
+│      glyphicons-halflings-regular.woff
+│      
+├─images
+│  │  1.jpg
+│  │  arrows.png
+│  │  banner-bg1.jpg
+│  │  banner-bg2.jpg
+│  │  banner-bg3.jpg
+│  │  logo1.jpg
+│  │  logo2.jpg
+│  │  logo3.jpg
+│  │  person_1.jpg
+│  │  person_2.jpg
+│  │  person_3.jpg
+│  │  
+│  ├─pic
+│  │      pic-1.jpg
+│  │      pic-2.jpg
+│  │      pic-3.jpg
+│  │      pic-4.jpg
+│  │      pic-5.jpg
+│  │      pic-6.jpg
+│  │      pic-7.jpg
+│  │      pic-8.jpg
+│  │      
+│  └─portfolio
+│          .jpg
+│          portfolio_pic1.jpg
+│          portfolio_pic2.jpg
+│          portfolio_pic3.jpg
+│          portfolio_pic4.jpg
+│          portfolio_pic5.jpg
+│          portfolio_pic6.jpg
+│          portfolio_pic7.jpg
+│          portfolio_pic8.jpg
+│          
+├─info
+│      case-kuqu.html
+│      case-nanweizhuang.html
+│      case-zouzhuang.html
+│      index.html
+│      info.txt
+│      readme.txt
+│      需求文档.txt
+│      
+└─js
+    │  bootstrap.min.js
+    │  custom.js
+    │  jquery-1.8.2.min.js
+    │  jquery.cslider.js
+    │  jquery.isotope.min.js
+    │  jquery.nav.js
+    │  modernizr-latest.js
+    │  
+    ├─fancybox
+    │      blank.gif
+    │      descr.wd3
+    │      fancybox_loading.gif
+    │      fancybox_loading_402x.gif
+    │      fancybox_overlay.png
+    │      fancybox_sprite.png
+    │      fancybox_sprite_402x.png
+    │      jquery.fancybox.css
+    │      jquery.fancybox.pack.js
+    │      
+    └─owl-carousel
+            ajaxloader.gif
+            grabbing.png
+            owl.carousel.css
+            owl.carousel.js
+            owl.carousel.min.js
+            owl.theme.css
+            owl.transitions.css
+            
